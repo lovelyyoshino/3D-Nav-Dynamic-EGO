@@ -1,4 +1,4 @@
-# 3D-Octomap-Ego-Nav
+# 3D-Nav-Dynamic-EGO
 
 > 从 PCD 点云到 ROS2 / RViz / Web 的 2D/3D 导航原型，完整规划链路：A* warm-start B 样条 + L-BFGS + 局部 A* 替代 ESDF + 二次碰撞检测 + 事件触发式 safety replan。
 
