@@ -1,0 +1,79 @@
+nav3d_bridge_node:
+  ros__parameters:
+    frame_id: map
+
+    planning.mode: 3d
+    planning.search_algorithm: astar
+    planning.traversability: uav
+    planning.use_octomap_map: false
+    planning.inflation_radius: 0.0
+    planning.ground_strict_direct_support: false
+    planning.ground_snap_radius_cells: 12
+    planning.ground_support_xy_radius_cells: 1
+    planning.ground_support_depth_cells: 1
+    planning.ground_robot_radius: 0.25
+    planning.uav_endpoint_snap_radius_cells: 12
+    planning.enable_dynamic_feasibility_check: false
+    planning.dynamic_feasibility_mode: sampled
+    planning.max_velocity: 1000000000.0
+    planning.max_acceleration: 1000000000.0
+    planning.feasibility_sample_dt: 0.05
+    planning.max_dynamic_time_scale: 10.0
+    planning.enable_initial_time_allocation: false
+    planning.min_time_allocation_interval: 0.05
+
+    map.pcd_path: ""
+    map.pcd_loader: builtin
+    map.resolution: 0.2
+    map.min_points_per_voxel: 1
+    map.min_cluster_voxels: 1
+    map.insert_free_space_rays: false
+    map.sensor_origin.x: 0.0
+    map.sensor_origin.y: 0.0
+    map.sensor_origin.z: 0.0
+    map.occupancy_grid_max_cells: 1000000
+    map.occupancy_grid_min_z: 0.2
+    map.occupancy_grid_max_z: 0.9
+
+    local_grid.enabled: true
+    local_grid.resolution: 0.2
+    local_grid.ray_clearing.enabled: true
+    local_grid.retention_sec: 0.0
+    local_grid.max_retained_frames: 1
+    local_grid.max_observation_age_sec: 5.0
+    local_grid.max_future_stamp_sec: 0.2
+
+    safety.enabled: true
+    safety.emergency_stop_horizon: 0.5
+    safety.lookahead_horizon: 0.8
+    safety.replan_cooldown_sec: 0.15
+    safety.local_replan_lookahead_distance: 6.0
+    safety.local_replan_enabled: true
+    safety.local_use_raw_astar: true
+    safety.local_astar_max_iterations: 20000
+
+    controller.enabled: true
+    controller.control_dt: 0.1
+    controller.lookahead_time: 0.4
+    controller.max_speed: 1.0
+    controller.goal_tolerance: 0.15
+    controller.command_frame: body
+    controller.motion_model: omni
+    controller.max_linear_acceleration: 1.5
+    controller.min_turning_radius: 1.0
+    controller.yaw_gain: 2.0
+    controller.max_yaw_rate: 0.75
+    controller.max_yaw_acceleration: 1.5
+    controller.command_path_sample_step: 0.05
+
+nav3d_cmd_vel_pose_sim:
+  ros__parameters:
+    frame_id: map
+    start_x: 0.0
+    start_y: 0.0
+    start_z: 0.0
+    start_yaw: 0.0
+    update_rate: 20.0
+    max_step: 0.2
+    cmd_timeout: 1.0
+    command_frame: map

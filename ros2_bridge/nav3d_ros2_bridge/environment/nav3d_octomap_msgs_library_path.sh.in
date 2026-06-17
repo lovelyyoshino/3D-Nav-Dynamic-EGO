@@ -1,0 +1,2 @@
+ament_prepend_unique_value LD_LIBRARY_PATH "@NAV3D_OCTOMAP_MSGS_LIBRARY_DIR@"
+ament_prepend_unique_value PYTHONPATH "@NAV3D_OCTOMAP_MSGS_PYTHONPATH@"

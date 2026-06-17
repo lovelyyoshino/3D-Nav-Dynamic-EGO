@@ -1,0 +1,3 @@
+# pcd_path origin_x origin_y origin_z
+frame_x_ray.pcd 0.0 0.0 0.0
+frame_y_ray.pcd 0.0 0.0 0.0
